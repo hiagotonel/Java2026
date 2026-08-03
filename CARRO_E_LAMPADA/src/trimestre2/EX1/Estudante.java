@@ -1,4 +1,4 @@
-package trimestre2.estudante1;
+package trimestre2.EX1;
 
 public class Estudante {
     
