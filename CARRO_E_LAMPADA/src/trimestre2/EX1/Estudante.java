@@ -8,7 +8,6 @@ public class Estudante {
     private List<Double> notas;
     Scanner scanner = new Scanner(System.in);
     
-
     public Estudante(String nome){
         this.nome = nome;
         this.notas = new ArrayList<>();
@@ -20,5 +19,10 @@ public class Estudante {
             Double nota = scanner.nextDouble();
             this.notas.add(nota);
         }
+    }
+
+    public Double calculaMedia(){
+        Double media=(this.notas.get(0)+this.notas.get(1)+this.notas.get(2)+this.notas.get(3)+this.notas.get(4))/5.0;
+        return media;
     }
 }
