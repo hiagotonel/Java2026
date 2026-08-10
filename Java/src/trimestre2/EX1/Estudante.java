@@ -22,7 +22,11 @@ public class Estudante {
     }
 
     public Double calculaMedia(){
-        Double media=(this.notas.get(0)+this.notas.get(1)+this.notas.get(2)+this.notas.get(3)+this.notas.get(4))/5.0;
+        Double soma = 0.0;
+        for(Integer i=0;i<=this.notas.size();i++){
+            soma+=this.notas.get(i);
+        }
+        Double media=soma/this.notas.size();
         return media;
     }
 }
