@@ -30,6 +30,16 @@ public class Estudante {
         return media;
     }
 
+    public Double menorNota(){
+        Double menor = this.notas.get(0);
+        for(Integer i=1;i<=this.notas.size();i++){
+            if (this.notas.get(i)<menor) {
+                menor = this.notas.get(i);
+            }
+        }
+        return menor;
+    }
+
     public String getNome(){
         return this.nome;
     }
