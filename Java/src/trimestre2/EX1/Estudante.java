@@ -29,4 +29,8 @@ public class Estudante {
         Double media=soma/this.notas.size();
         return media;
     }
+
+    public String getNome(){
+        return this.nome;
+    }
 }
