@@ -4,8 +4,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Estudante {
-    private String nome;
-    private List<Double> notas;
+    private final String nome;
+    private final List<Double> notas;
     Scanner scanner = new Scanner(System.in);
     
     public Estudante(String nome){
