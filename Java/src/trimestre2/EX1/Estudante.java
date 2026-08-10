@@ -14,10 +14,15 @@ public class Estudante {
     }
 
     public void insereNotas(){
-        for(Integer i=0;i<=this.notas.size();i++){
-            System.out.println("Insira a nota "+(i+1)+" do aluno "+ this.nome +":");
-            Double nota = scanner.nextDouble();
-            this.notas.add(nota);
+        if(this.notas.size()>4){
+            System.out.println("As notas já foram preenchidas para esse aluno");
+        }
+        else{
+            for(Integer i=0;i<=this.notas.size();i++){
+                System.out.println("Insira a nota "+(i+1)+" do aluno "+ this.nome +":");
+                Double nota = scanner.nextDouble();
+                this.notas.add(nota);
+            }
         }
     }
 
