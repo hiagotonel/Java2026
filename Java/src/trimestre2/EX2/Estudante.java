@@ -63,14 +63,15 @@ public class Estudante {
         return str_notas;
     }
 
-    public ArrayList<Estudante> aprovados(ArrayList<Estudante> estudantes){
-        ArrayList<Estudante> aprovados = null;
+    public static ArrayList<Estudante> aprovados(ArrayList<Estudante> estudantes){
+        ArrayList<Estudante> aprovados = new ArrayList<>();
         for(int i=0;i<estudantes.size();i++){
             if(estudantes.get(i).calculaMedia()>=6){
                 aprovados.add(estudantes.get(i));
             }
         }
         if(aprovados.isEmpty()){
+            System.out.println("ERRO: Deu Null no ArrayList dos aprovados");
             return null;
         }
         return aprovados;

@@ -15,9 +15,10 @@ public class Main {
             estudantes.getLast().insereNotas();
             System.out.println("Digite '0' para parar de inserir estudantes: ");
             opt = scanner.nextInt();
+            scanner.nextLine();
         } while (opt != 0);
 
-        ArrayList<Estudante> aprovados = estudantes.getFirst().aprovados(estudantes);
+        ArrayList<Estudante> aprovados = Estudante.aprovados(estudantes);
 
         if(aprovados.isEmpty()){
             System.out.println("Nenhum estudante encontrado");
