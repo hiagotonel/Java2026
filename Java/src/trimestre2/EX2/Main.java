@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Estudante> estudantes = null;
+        ArrayList<Estudante> estudantes = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
         int opt = 0;
         do {
