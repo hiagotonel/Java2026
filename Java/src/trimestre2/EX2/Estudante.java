@@ -18,8 +18,16 @@ public class Estudante {
             System.out.println("As notas já foram preenchidas para esse aluno");
         } else {
             for (int i = 0; i <5; i++) {
-                System.out.println("Insira a nota " + (i + 1) + " do aluno " + this.nome + ":");
+                boolean bool = false;
+                do {
+                    bool = false;
+                    System.out.println("Insira a nota " + (i + 1) + " do aluno " + this.nome + ":");
                     Double nota = scanner.nextDouble();this.notas.add(nota);
+                    if(nota>10.0 || nota<0.0){
+                        System.out.println("ERRO: nota(0-10) inválida("+(nota)+")! Revertendo ação...");
+                        bool = true;
+                    }
+                } while(bool);
             }
         }
     }
