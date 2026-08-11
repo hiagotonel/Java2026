@@ -71,7 +71,7 @@ public class Estudante {
             }
         }
         if(aprovados.isEmpty()){
-            System.out.println("ERRO: Deu Null no ArrayList dos aprovados");
+
             return null;
         }
         return aprovados;

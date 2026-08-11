@@ -21,12 +21,12 @@ public class Main {
         ArrayList<Estudante> aprovados = Estudante.aprovados(estudantes);
 
         if(aprovados.isEmpty()){
-            System.out.println("Nenhum estudante encontrado");
+            System.out.println("Nenhum estudante aprovado");
         }
         else{
             System.out.println("DADOS DOS ESTUDANTES APROVADOS: \n");
             for(int i=0;i<aprovados.size();i++){
-                System.out.println(aprovados.get(i).getNotas());
+                System.out.println("\n"+aprovados.get(i).getNotas());
                 System.out.println("Menor nota do(a) " + aprovados.get(i).getNome() + ": " + aprovados.get(i).menorNota());
                 System.out.println("Média do(a) " + aprovados.get(i).getNome() + ": " + aprovados.get(i).calculaMedia());
             }
