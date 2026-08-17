@@ -3,16 +3,25 @@ package trimestre2.EX5;
 public class Livro extends publicacao {
     private Boolean disponivel;
 
-    public Livro(String titulo, Boolean disponivel){
+    public Livro(String titulo){
         this.titulo = titulo;
-        this.disponivel = disponivel;
+        this.disponivel = true;
     }
 
-    public Boolean getDisponivel(){
-        return disponivel;
+    public String isDisponivel(){
+        if(disponivel){
+            return "disponivel";
+        }
+        else{
+            return "emprestado";
+        }
     }
 
-    public void setDisponivel(Boolean disponivel) {
-        this.disponivel = disponivel;
+    public void emprestar(){
+        disponivel = false;
+    }
+
+    public void devolver(){
+        disponivel = true;
     }
 }
