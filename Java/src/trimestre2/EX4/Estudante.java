@@ -47,7 +47,7 @@ public class Estudante {
         Double soman = 0.0;
         for(int i=0;i<5;i++){
             somap += pesos.get(i);
-            soman += notas.get(i);
+            soman += notas.get(i)+pesos.get(i);
         }
         media = soman/somap;
         return media;
@@ -79,6 +79,20 @@ public class Estudante {
         ArrayList<Estudante> aprovados = new ArrayList<>();
         for(int i=0;i<estudantes.size();i++){
             if(estudantes.get(i).calculaMedia()>=6){
+                aprovados.add(estudantes.get(i));
+            }
+        }
+        if(aprovados.isEmpty()){
+
+            return null;
+        }
+        return aprovados;
+    }
+
+    public static ArrayList<Estudante> aprovados(ArrayList<Estudante> estudantes, ArrayList<Double> pesos){
+        ArrayList<Estudante> aprovados = new ArrayList<>();
+        for(int i=0;i<estudantes.size();i++){
+            if(estudantes.get(i).calculaMedia(pesos)>=6){
                 aprovados.add(estudantes.get(i));
             }
         }

@@ -26,7 +26,7 @@ public class Main {
             scanner.nextLine();
         } while (opt != 0);
 
-        ArrayList<Estudante> aprovados = Estudante.aprovados(estudantes);
+        ArrayList<Estudante> aprovados = Estudante.aprovados(estudantes,pesos);
 
         if(aprovados==null){
             System.out.println("Nenhum estudante aprovado");
