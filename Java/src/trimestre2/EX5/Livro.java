@@ -18,10 +18,20 @@ public class Livro extends publicacao {
     }
 
     public void emprestar(){
-        disponivel = false;
+        if(!disponivel){
+            System.out.println("ERRO: O livro não está disponivel para empréstimo!");
+        }
+        else {
+            disponivel = false;
+        }
     }
 
     public void devolver(){
-        disponivel = true;
+        if(disponivel){
+            System.out.println("ERRO: O livro já está na biblioteca!");
+        }
+        else {
+            disponivel = true;
+        }
     }
 }
