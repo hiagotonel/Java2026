@@ -10,10 +10,11 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Double peso = 0.0;
         for(int i = 0;i<5;i++){
-            System.out.println("Insira o peso da nota: ");
+            System.out.println("Insira o peso da nota "+(i+1)+": ");
             peso = scanner.nextDouble();
             pesos.add(peso);
         }
+        scanner.nextLine();
         int opt = 0;
         do {
             System.out.println("Insira o nome do aluno: ");
@@ -25,9 +26,9 @@ public class Main {
             scanner.nextLine();
         } while (opt != 0);
 
-        ArrayList<Estudante> aprovados = Estudante.aprovados(estudantes);
+        ArrayList<Estudante> aprovados = Estudante.aprovados(estudantes,pesos);
 
-        if(aprovados.isEmpty()){
+        if(aprovados==null){
             System.out.println("Nenhum estudante aprovado");
         }
         else{
