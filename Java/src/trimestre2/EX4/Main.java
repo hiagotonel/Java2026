@@ -6,7 +6,14 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         ArrayList<Estudante> estudantes = new ArrayList<>();
+        ArrayList<Double> pesos = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
+        Double peso = 0.0;
+        for(int i = 0;i<5;i++){
+            System.out.println("Insira o peso da nota: ");
+            peso = scanner.nextDouble();
+            pesos.add(peso);
+        }
         int opt = 0;
         do {
             System.out.println("Insira o nome do aluno: ");
@@ -28,7 +35,7 @@ public class Main {
             for(int i=0;i<aprovados.size();i++){
                 System.out.println("\n"+aprovados.get(i).getNotas());
                 System.out.println("Menor nota do(a) " + aprovados.get(i).getNome() + ": " + aprovados.get(i).menorNota());
-                System.out.println("Média do(a) " + aprovados.get(i).getNome() + ": " + aprovados.get(i).calculaMedia());
+                System.out.println("Média do(a) " + aprovados.get(i).getNome() + ": " + aprovados.get(i).calculaMedia(pesos));
             }
         }
     }

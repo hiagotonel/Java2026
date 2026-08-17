@@ -41,6 +41,18 @@ public class Estudante {
         return media;
     }
 
+    public Double calculaMedia(ArrayList<Double> pesos){
+        Double media = 0.0;
+        Double somap = 0.0;
+        Double soman = 0.0;
+        for(int i=0;i<5;i++){
+            somap += pesos.get(i);
+            soman += notas.get(i);
+        }
+        media = soman/somap;
+        return media;
+    }
+
     public Double menorNota(){
         Double menor = this.notas.getFirst();
         for(int i=1;i<this.notas.size();i++){
