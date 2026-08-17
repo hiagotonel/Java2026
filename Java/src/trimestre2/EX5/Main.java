@@ -39,6 +39,6 @@ public class Main {
         System.out.println("Título: " + periodico.getTitulo());
         System.out.println("Volume: " + periodico.getVolume());
 
-        System.out.println("\nPeriódicos não podem ser emprestados, então não faço a menor ideia do que fazer com ele.");
+        System.out.println("\nPeriódicos não podem ser emprestados, então não faço a menor ideia do que fazer.");
     }
 }
