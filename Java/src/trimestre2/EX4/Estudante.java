@@ -1,4 +1,4 @@
-package trimestre2.EX3;
+package trimestre2.EX4;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
