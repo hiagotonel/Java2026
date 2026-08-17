@@ -1,24 +1,15 @@
 package trimestre2.EX5;
 
-public class Periodico {
-    private String titulo;
+public class Periodico extends publicacao {
     private Integer volume;
 
-    public Periodico(String titulo, Integer volume){
-        this.titulo= titulo;
+    public Periodico(String titulo, Integer volume) {
+        this.titulo = titulo;
         this.volume = volume;
-    }
-
-    public String getTitulo(){
-        return titulo;
     }
 
     public Integer getVolume() {
         return volume;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
     }
 
     public void setVolume(Integer volume) {

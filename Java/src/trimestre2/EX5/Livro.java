@@ -1,16 +1,11 @@
 package trimestre2.EX5;
 
-public class Livro {
-    private String titulo;
+public class Livro extends publicacao {
     private Boolean disponivel;
 
     public Livro(String titulo, Boolean disponivel){
         this.titulo = titulo;
         this.disponivel = disponivel;
-    }
-
-    public String getTitulo() {
-        return titulo;
     }
 
     public Boolean getDisponivel(){
@@ -19,9 +14,5 @@ public class Livro {
 
     public void setDisponivel(Boolean disponivel) {
         this.disponivel = disponivel;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
     }
 }
