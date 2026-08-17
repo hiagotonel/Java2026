@@ -9,7 +9,7 @@ public class Main {
 
         System.out.println("===== LIVRO =====");
         System.out.println("Título: " + livro.getTitulo());
-        System.out.println("situação: " + livro.isDisponivel());
+        System.out.println("Situação: " + livro.isDisponivel());
 
         System.out.println();
 
@@ -17,11 +17,11 @@ public class Main {
         System.out.println("Título: " + periodico.getTitulo());
         System.out.println("Volume: " + periodico.getVolume());
 
-        System.out.println("\n===== EMPRÉSTIMO =====");
+        System.out.println("\n===== SIMULAÇÃO DE EMPRÉSTIMO =====");
         livro.emprestar();
 
         System.out.println("Livro: " + livro.getTitulo());
-        System.out.println("Disponível após empréstimo: " + livro.isDisponivel());
+        System.out.println("Situação: " + livro.isDisponivel());
 
         System.out.println("\nTentando emprestar o livro novamente:");
         livro.emprestar();
@@ -30,7 +30,7 @@ public class Main {
         livro.devolver();
 
         System.out.println("Livro: " + livro.getTitulo());
-        System.out.println("Disponível após devolução: " + livro.isDisponivel());
+        System.out.println("Situação: " + livro.isDisponivel());
 
         System.out.println("\nTentando devolver o livro novamente:");
         livro.devolver();
@@ -39,6 +39,6 @@ public class Main {
         System.out.println("Título: " + periodico.getTitulo());
         System.out.println("Volume: " + periodico.getVolume());
 
-        System.out.println("Periódicos não podem ser emprestados.");
+        System.out.println("\nPeriódicos não podem ser emprestados, então não faço a menor ideia do que fazer com ele.");
     }
 }
