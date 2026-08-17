@@ -33,21 +33,21 @@ public class Estudante {
     }
 
     public Double calculaMedia(){
-        Double soma = 0.0;
+        double soma = 0.0;
         for(int i=0;i<this.notas.size();i++){
             soma+=this.notas.get(i);
         }
-        Double media=soma/this.notas.size();
+        double media=soma/this.notas.size();
         return media;
     }
 
     public Double calculaMedia(ArrayList<Double> pesos){
-        Double media = 0.0;
-        Double somap = 0.0;
-        Double soman = 0.0;
+        double media = 0.0;
+        double somap = 0.0;
+        double soman = 0.0;
         for(int i=0;i<5;i++){
             somap += pesos.get(i);
-            soman += notas.get(i)+pesos.get(i);
+            soman += notas.get(i)*pesos.get(i);
         }
         media = soman/somap;
         return media;
@@ -97,7 +97,6 @@ public class Estudante {
             }
         }
         if(aprovados.isEmpty()){
-
             return null;
         }
         return aprovados;
