@@ -27,7 +27,7 @@ public class Main {
 
         ArrayList<Estudante> aprovados = Estudante.aprovados(estudantes);
 
-        if(aprovados.isEmpty()){
+        if(aprovados==null){
             System.out.println("Nenhum estudante aprovado");
         }
         else{
